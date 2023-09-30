@@ -154,7 +154,7 @@ In summary, decipher.py is responsible for:
 ## Demonstration
 
 ## Clone the repository
-git clone https://github.com/yourusername/yourproject.git
+git clone [https://github.com/yourusername/yourproject.git](https://github.com/ChristianTStu/UoA-Python-Projects.git)
 
 ## License
 

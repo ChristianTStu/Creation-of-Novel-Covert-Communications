@@ -2,7 +2,6 @@
 ## Description
 This Python project combines steganography and a basic encryption method to encode and decode messages within images.
 
-Provide a brief description of your project. What does it do and why is it useful?
 Table of Contents
 
     Installation

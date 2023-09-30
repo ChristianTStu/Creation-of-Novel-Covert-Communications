@@ -1,6 +1,6 @@
-# Data Hiding and Covert Communications Python Demo
+# Data Hiding and Covert Communications with Python
 ## Description
-This Python project combines steganography and a basic encryption method to encode and decode messages within images.
+This Python project combines steganography and a basic encryption methods to encode and decode messages within images.
 
 ## Table of Contents
 

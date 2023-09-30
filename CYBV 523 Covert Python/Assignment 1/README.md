@@ -6,7 +6,6 @@ This Python project combines steganography and a basic encryption method to enco
 
     Installation
     Usage
-    Demo
     Cloning the Repo
     License
 
@@ -150,8 +149,6 @@ In summary, decipher.py is responsible for:
     Applying the reverse of the cipher to calculate the indices for decryption.
     Converting the modified indices back to characters to form the final decrypted message.
     Printing the final decoded message to the console.
-    
-## Demonstration
 
 ## Clone the repository
 git clone [https://github.com/ChristianTStu/UoA-Python-Projects.git](https://github.com/ChristianTStu/UoA-Python-Projects.git)

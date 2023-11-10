@@ -33,4 +33,5 @@ def processPayloads(p):
 
 # Start sniffing packets from a specified file (e.g., a pcapng file)
 # The 'prn' parameter specifies the function to be called for each packet
-sniff(offline="EncryptedChannel.pcapng", prn=processPayloads)
+sniff(offline="C:/Users/Christian/Documents/GitHub/UoA-Python-Projects/CYBV 523 Creation of Novel Covert Communications/Milestone 6/WireShark Traffic Capture/EncryptedChannel.pcapng", prn=processPayloads)
+

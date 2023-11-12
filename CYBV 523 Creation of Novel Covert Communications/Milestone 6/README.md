@@ -1,43 +1,61 @@
-# Creation of Novel Covert Communications
-## Description
-This Python project demonstrates the use of encryption, decryption, and network traffic analysis to facilitate secure and covert communications. It combines socket programming, AES encryption, and entropy analysis to encrypt, transmit, receive, and analyze potentially encrypted data.
+# README: Encrypted Communication and Traffic Detection
 
-## Table of Contents
+## Introduction
+This project consists of three Python scripts designed to demonstrate encrypted communication between a client and server, and the detection of encrypted traffic using network packet analysis. The scripts are:
+1. `EncryptedChannelServerV2.py` - The server script that listens for incoming encrypted messages, decrypts, and displays them.
+2. `EncryptedChannelClientV2.py` - The client script that sends an encrypted message to the server.
+3. `DetectEncryptedTrafficV2.py` - A script that analyzes network traffic to detect potentially encrypted data.
 
-- Installation
-- Usage
-- Cloning the Repo
-- License
+## Requirements
+- Python 3.x
+- Libraries: `cryptography`, `socket`, `scapy`, `pandas`, `scipy`
 
-## Installation
+## Installation Instructions
+1. Ensure Python 3.x is installed on your system.
+2. Install the required Python libraries using pip:
+   ```bash
+   pip install cryptography scapy pandas scipy
+   ```
 
-Please ensure that you have Python installed along with necessary libraries like `cryptography`, `scapy`, `pandas`, and `socket`. This project can be useful for understanding secure communication, encryption, and network packet analysis.
+## Build Instructions
+No specific build process is required as the project consists of Python scripts.
 
-## Usage
+## Run Instructions
+### Running the Encrypted Communication Server and Client
+1. **Start the Server:**
+   - Open a terminal or command prompt.
+   - Navigate to the directory containing `EncryptedChannelServerV2.py`.
+   - Run the script:
+     ```bash
+     python EncryptedChannelServerV2.py
+     ```
+   - The server will start and wait for incoming connections.
 
-### File 1: Encryption Script (encryption.py)
+2. **Run the Client:**
+   - Open another terminal or command prompt.
+   - Navigate to the directory containing `EncryptedChannelClientV2.py`.
+   - Run the script:
+     ```bash
+     python EncryptedChannelClientV2.py
+     ```
+   - The client will connect to the server, send an encrypted message, and the server will display the decrypted message.
 
-This file contains the code for encrypting a message and sending it over a network:
+### Running the Traffic Detection Script
+1. **Capture Network Traffic:**
+   - Use a tool like Wireshark to capture network traffic while the server and client are communicating. Save the capture file (e.g., `EncryptedChannel.pcapng`).
 
-- `encrypt(data, key, iv)`: Encrypts the data using AES in CBC mode.
-- The script establishes a socket connection and sends the encrypted data to a specified server.
+2. **Analyze the Traffic:**
+   - Ensure `DetectEncryptedTrafficV2.py` is in the same directory as your capture file, or modify the script to point to the correct file path.
+   - Run the script:
+     ```bash
+     python DetectEncryptedTrafficV2.py
+     ```
+   - The script will analyze the captured traffic and report any potentially encrypted data packets.
 
-### File 2: Decryption Script (decryption.py)
-
-This file involves receiving and decrypting the message:
-
-- `decrypt(data, key, iv)`: Decrypts the received data using the same key and IV.
-- The script listens for incoming encrypted messages and decrypts them upon receipt.
-
-### File 3: Entropy Analysis Script (entropy_analysis.py)
-
-This file is used for analyzing network packets to detect encrypted data:
-
-- `calcEntropy(data)`: Calculates the entropy of the data to identify randomness.
-- `processPayloads(p)`: Analyzes packets captured in a .pcap file to detect potential encryption.
-- Uses `scapy` to sniff packets and `pandas` for data analysis.
-
-## Clone the repository
+## Notes
+- The encryption key is hardcoded in the scripts for demonstration purposes. In a real-world application, use a securely generated and stored key.
+- The server and client scripts are configured to run on `localhost` (127.0.0.1) for testing. Modify the `host` variable for different network setups.
+- The traffic detection script is configured for a specific file path. Adjust the file path in the `sniff` function call to match your environment.
 
 ## Clone the repository
 git clone [https://github.com/ChristianTStu/UoA-Python-Projects.git](https://github.com/ChristianTStu/UoA-Python-Projects.git)
